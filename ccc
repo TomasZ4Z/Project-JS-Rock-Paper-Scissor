@@ -1,0 +1,19 @@
+else if (respuesta === ("piedra") && resultado === ("papel")) {
+    console.log ("has perdido")}
+
+ else if (respuesta === ("piedra") && resultado === ("tijera")) {
+    console.log ("has ganado") }
+
+else if (respuesta === ("papel") && resultado === ("tijera")) {
+    console.log ("has perdido")}
+
+else if (respuesta === ("papel") && resultado === ("piedra")) {
+    console.log ("has ganado") }
+
+else if (respuesta === ("tijera") && resultado === ("piedra")){
+    console.log ("has perdido")}
+
+else if (respuesta === ("tijera") && resultado === ("papel")) {
+    console.log ("has ganado")}
+else if (respuesta != "piedra" && respuesta != "tijera" && respuesta != "papel"){
+    console.log ("respuesta incorrecta");
