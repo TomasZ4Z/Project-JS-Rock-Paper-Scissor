@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Botones con acciones propias</title>
+</head>
+<body>
+
+  <button id="crearBoton">Crear nuevo botón</button>
+  <div id="zonaBotones"></div>
+
+  <script>
+    const crearBoton = document.getElementById('crearBoton');
+    const zonaBotones = document.getElementById('zonaBotones');
+    let contador = 1;
+
+    crearBoton.addEventListener('click', () => {
+      const boton = document.createElement('button');
+      const id = contador++;
+
+      boton.textContent = `Botón ${id}`;
+
+      // Acción personalizada para este botón
+      switch (id) {
+        case 1:
+          boton.addEventListener('click', () => {
+            alert('Soy el primer botón creado');
+          });
+          break;
+        case 2:
+          boton.addEventListener('click', () => {
+            console.log('Botón 2 hizo algo en la consola');
+          });
+          break;
+        case 3:
+          boton.addEventListener('click', () => {
+            boton.style.backgroundColor = 'red';
+          });
+          break;
+        default:
+          boton.addEventListener('click', () => {
+            alert(`Soy el botón número ${id}, sin acción especial`);
+          });
+      }
+
+      zonaBotones.appendChild(boton);
+    });
+  </script>
+
+</body>
+</html>
+
